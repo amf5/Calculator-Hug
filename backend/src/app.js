@@ -39,9 +39,6 @@ import {
     errorMiddleware
 } from "./middlewares/error.middleware.js";
 
-import {
-    swaggerDocument
-} from "./docs/swagger.js";
 
 const app = express();
 
