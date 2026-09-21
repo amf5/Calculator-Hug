@@ -142,13 +142,7 @@ app.get(
 
 // API documentation
 
-app.use(
-    "/api-docs",
-    swaggerUi.serve,
-    swaggerUi.setup(
-        swaggerDocument
-    )
-);
+
 
 
 // 404
