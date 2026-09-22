@@ -13,7 +13,7 @@ const router = express.Router();
 router.post("/percentage", percentageCalculator);
 router.post("/discount", discountCalculator);
 router.post( "/bmi",bmiCalculator);
-router.post(  "/age", ageCalculator);
+router.post( "/age", ageCalculator);
 router.post("/gpa", gpaCalculator);
 router.post("/salary", salaryCalculator);
 router.post( "/date-difference",dateDifferenceCalculator);
