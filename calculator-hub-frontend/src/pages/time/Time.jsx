@@ -25,7 +25,7 @@ const Time = () => {
         "Asia/Kolkata",
         "America/New_York",
         "America/Los_Angeles",
-        "Australia/Sydney"
+        "Australia/Sydney",
     ];
 
     const handleSubmit = async (event) => {
@@ -38,12 +38,22 @@ const Time = () => {
             setLoading(true);
 
             const response = await api.get(
-                `/api/v1/time/${timezone}`
+                "/api/v1/time",
+                {
+                    params: {
+                        timezone,
+                    },
+                }
             );
 
             setResult(response.data.data);
 
         } catch (error) {
+            console.error(
+                "Time API Error:",
+                error
+            );
+
             setError(
                 error.response?.data?.message ||
                 "Failed to get timezone information."
